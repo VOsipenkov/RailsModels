@@ -1,0 +1,30 @@
+<%= form_for [@organization, @employ, @employment] do |f| %>
+  <% if @employment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eаmployment.errors.count, "error") %> prohibited this employment from being saved:</h2>
+
+      <ul>
+      <% @employment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nameTask %><br>
+    <%= f.text_field :nameTask %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

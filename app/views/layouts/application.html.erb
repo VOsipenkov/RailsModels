@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Organizations with list employers application</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+<%= render 'layouts/header' %>
+<br>
+<p align="center">
+  <%= yield %>
+</p>
+<br>
+<%= render 'layouts/footer' %>
+
+</body>
+</html>

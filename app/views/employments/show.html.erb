@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nametask:</strong>
+  <%= @employment.nameTask %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @employment.status %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @employment.date %>
+</p>
+
+<p>
+  <strong>Employ:</strong>
+  <%= @employment.employ_id %>
+</p>
+
+<%= link_to 'Edit', edit_organization_employ_employment_path(@employment) %> |
+<%= link_to 'Back', organization_employ_employments_path %>

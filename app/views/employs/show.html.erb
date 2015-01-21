@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employ.name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @employ.position %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @employ.phone %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @employ.organization_id %>
+</p>
+
+<%= link_to 'Edit',  :controller=>'employs', :action => 'edit', :id => @employ.id, :organization_id => @employ.organization_id %>
+
+
+<%= link_to 'Delete',
+            { :controller => 'employs', :action => 'destroy', :id => @employ.id, :organization_id => @employ.organization_id },
+            { :confirm => 'Are you sure?', :method => :delete, :remote => true}  %>
+
